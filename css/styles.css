@@ -7,7 +7,7 @@
   /* background colors */
   --main-bg-cl: #f5f4fa;
   --dark-bg-cl: #2f303a;
-  /* tansition */
+  /* transition */
   --time: 250ms;
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -120,16 +120,17 @@ ul {
   line-height: 1.14em;
   letter-spacing: 0.02em;
   color: var(--title-text-cl);
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-text-cl);
 
   transition-property: color;
   transition-duration: var(--time);
   transition-timing-function: var(--cubic);
 }
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-text-cl);
+}
+
 .cont-list {
   margin: 0 0 0 auto;
   padding: 0;
@@ -150,15 +151,15 @@ ul {
   line-height: 1.14em;
   letter-spacing: 0.02em;
   color: var(--main-text-cl);
+
+  transition-property: color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .cont-link:hover,
 .cont-link:focus {
   color: var(--accent-text-cl);
-
-  transition-property: color;
-  transition-duration: var(--time);
-  transition-timing-function: var(--cubic);
 }
 
 .cont-icon {
@@ -223,7 +224,7 @@ ul {
 
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition-property: opacity;
+  transition-property: opacity, visibility;
   transition-duration: 300ms;
   transition-timing-function: var(--cubic);
 }
@@ -253,8 +254,8 @@ ul {
 
   transform: translate(-50%, -50%) scale(1);
   transition-property: transform;
-  transition-duration: 300ms;
-  transition-timing-function: ease;
+  transition-duration: 500ms;
+  transition-timing-function: var(--cubic);
 }
 
 .modal-btn {
@@ -464,16 +465,16 @@ ul {
   border-radius: 50%;
   color: #afb1b8;
   background-color: #ffffff;
+
+  transition-property: color, background-color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .socials-link:hover,
 .socials-link:focus {
   color: #ffffff;
   background-color: var(--accent-text-cl);
-
-  transition-property: color background-color;
-  transition-duration: var(--time);
-  transition-timing-function: var(--cubic);
 }
 
 .socials-icon {
@@ -510,16 +511,16 @@ ul {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition-property: color, border-color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .client-link:hover,
 .client-link:focus {
   color: var(--accent-text-cl);
   border-color: var(--accent-text-cl);
-
-  transition-property: color border-color;
-  transition-duration: var(--time);
-  transition-timing-function: var(--cubic);
 }
 
 .client-icon {
@@ -579,14 +580,15 @@ ul {
   font-size: 14px;
   line-height: 1.71em;
   color: rgba(255, 255, 255, 0.6);
-}
-.footer-cont-link:hover,
-.footer-cont-link:focus {
-  color: var(--accent-text-cl);
 
   transition-property: color;
   transition-duration: var(--time);
   transition-timing-function: var(--cubic);
+}
+
+.footer-cont-link:hover,
+.footer-cont-link:focus {
+  color: var(--accent-text-cl);
 }
 
 .foot-conteiner-socials {
@@ -617,15 +619,15 @@ ul {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  transition-property: background-color;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .foot-socials-link:hover,
 .foot-socials-link:focus {
   background-color: var(--accent-text-cl);
-
-  transition-property: background-color;
-  transition-duration: var(--time);
-  transition-timing-function: var(--cubic);
 }
 
 .foot-socials-icon {
@@ -659,15 +661,16 @@ ul {
   color: #ffffff;
   background-color: var(--accent-text-cl);
   border-radius: 4px;
-
   cursor: pointer;
+
+  transition-property: box-shadow;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 .portfolio-btn-active:hover,
 .portfolio-btn-active:focus {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition-property: filter;
-  transition-duration: var(--time);
-  transition-timing-function: var(--cubic);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-btn {
@@ -683,16 +686,17 @@ ul {
   background: var(--main-bg-cl);
   border-radius: 4px;
   cursor: pointer;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   color: #ffffff;
   background-color: var(--accent-text-cl);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
-  transition-property: color background-color filter;
-  transition-duration: var(--time);
-  transition-timing-function: var(--cubic);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*#endregion*/
 
@@ -712,16 +716,15 @@ ul {
 
 .portfolio-card-link {
   display: block;
+  transition-property: box-shadow;
+  transition-duration: var(--time);
+  transition-timing-function: var(--cubic);
 }
 
 .portfolio-card-link:hover,
 .portfolio-card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-
-  transition-property: box-shadow;
-  transition-duration: var(--time);
-  transition-timing-function: var(--cubic);
 }
 
 .card-img-wrapper {
